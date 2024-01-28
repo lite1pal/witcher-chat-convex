@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen bg-stone-800 p-24 text-stone-200">
+    <main className="flex min-h-screen flex-col gap-10 sm:flex-row sm:gap-0 bg-stone-800 p-24 text-stone-200">
       <div className="flex flex-col gap-10 w-1/2">
         <h1 className="text-xl">
           Pick a fellow to step in a cozy flaked-with-travellers inn

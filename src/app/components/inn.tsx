@@ -11,7 +11,7 @@ export default function Inn({ inn, pickedFellow }: any) {
   const [input, setInput] = useState("");
 
   // react refs
-  const innRef = useRef(null);
+  const innRef: any = useRef(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,7 +30,7 @@ export default function Inn({ inn, pickedFellow }: any) {
       >
         {sayings?.map((saying) => {
           return (
-            <div className="flex flex-col p-2">
+            <div key={saying._id} className="flex flex-col p-2">
               <div className="text-xl text-indigo-300">{saying.fellowName}</div>
               <div className="pl-10">{saying.saying}</div>
             </div>
