@@ -17,14 +17,16 @@ export const createSaying = mutation({
     innId: v.id("inns"),
     fellowId: v.id("fellows"),
     fellowName: v.string(),
+    fellowImg: v.string(),
   },
   handler: async (ctx, args) => {
-    const { saying, innId, fellowId, fellowName } = args;
+    const { saying, innId, fellowId, fellowName, fellowImg } = args;
     const sayingId = await ctx.db.insert("sayings", {
       saying,
       innId,
       fellowId,
       fellowName,
+      fellowImg,
     });
     return sayingId;
   },

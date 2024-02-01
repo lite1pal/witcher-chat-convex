@@ -6,10 +6,13 @@ export default defineSchema({
     saying: v.string(),
     fellowId: v.id("fellows"),
     fellowName: v.string(),
+    fellowImg: v.optional(v.string()),
     innId: v.id("inns"),
   }),
   fellows: defineTable({
     name: v.string(),
+    img: v.optional(v.string()),
+    picked: v.optional(v.boolean()),
   }),
   inns: defineTable({
     title: v.string(),
