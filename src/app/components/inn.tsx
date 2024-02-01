@@ -21,10 +21,10 @@ export default function Inn({ inn, pickedFellow }: any) {
   }, [sayings]);
 
   return (
-    <div className="flex flex-col gap-5 w-screen md:w-full rounded-xl p-5">
+    <div className="flex flex-col gap-5 w-screen md:w-full rounded-xl">
       <div
         ref={innRef}
-        className="overflow-y-scroll h-80 p-5 flex flex-col gap-3"
+        className="overflow-y-scroll w-full h-80 flex flex-col gap-3"
       >
         {sayings?.map((saying) => {
           return (
@@ -34,7 +34,7 @@ export default function Inn({ inn, pickedFellow }: any) {
                 pickedFellow.name === saying.fellowName
                   ? "chat-end"
                   : "chat-start"
-              }`}
+              } px-1 sm:p-0`}
             >
               <div className="chat-image avatar">
                 <div className="w-10 rounded-full">
@@ -50,7 +50,7 @@ export default function Inn({ inn, pickedFellow }: any) {
                   {new Date(saying._creationTime).toLocaleTimeString()}
                 </time>
               </div>
-              <div className="chat-bubble">{saying.saying}</div>
+              <div className="chat-bubble prose">{saying.saying}</div>
             </div>
           );
         })}

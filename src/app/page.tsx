@@ -36,10 +36,10 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col gap-10 items-center bg-slate-800 p-24 text-violet-400">
+    <main className="flex min-h-screen flex-col gap-10 items-center bg-slate-800 p-5 sm:p-24 text-violet-400">
       <div className="flex flex-col gap-10">
         <h1 className="text-2xl text-center sm:text-4xl">
-          Pick a fellow to step in a cozy flaked-with-travellers inn
+          Pick a fellow to step in a cozy full-of-travellers inn
         </h1>
         <div className="flex flex-wrap gap-5 items-center justify-center">
           {fellows?.map((fellow, i) => {
